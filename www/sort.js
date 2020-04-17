@@ -1,3 +1,5 @@
+import {For_loop, Statement} from "./algorithm_components.js"
+
 export function insertion_sort(sort_target) {
     for(let i = 0; i < sort_target.length(); i++) {
         const current = sort_target.get_at(i);
@@ -12,3 +14,4 @@ export function insertion_sort(sort_target) {
     }
 }
 
+export const insertion = For_loop([Statement()]);
