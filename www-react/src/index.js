@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import * as algorithms from "wasm-algorithms"
+
+import('wasm-algorithms').then(algorithms =>
+  console.log(algorithms.hello_world())
+);
 
 ReactDOM.render(
   <React.StrictMode>

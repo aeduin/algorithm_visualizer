@@ -8,6 +8,7 @@ use wasm_bindgen::prelude::*;
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
-fn hello_world() -> String {
+#[wasm_bindgen]
+pub fn hello_world() -> String {
     "hello world".to_string()
 }

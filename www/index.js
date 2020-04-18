@@ -1,6 +1,7 @@
-import algorithms from "wasm-algorithms"
-import * as sort from "./sort.js"
+import {hello_world} from "wasm-algorithms"
+//import * as sort from "./sort.js"
 
 document.writeln(
-    sort.insertion.visualize()
+    //sort.insertion.visualize()
+    hello_world()
 );
