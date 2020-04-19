@@ -1,4 +1,4 @@
-import {visualise, to_string} from "./algorithm_components/lib";
+import {visualise, to_string} from "./algorithm_components/mod";
 import {for_loop, assign, block} from "./algorithm_components/statements";
 
 export function insertion_sort(sort_target) {
