@@ -1,4 +1,5 @@
-import {For_loop, Statement} from "./algorithm_components.js"
+import {visualise, to_string} from "./algorithm_components/lib";
+import {for_loop, assign, block} from "./algorithm_components/statements";
 
 export function insertion_sort(sort_target) {
     for(let i = 0; i < sort_target.length(); i++) {
@@ -14,4 +15,8 @@ export function insertion_sort(sort_target) {
     }
 }
 
-export const insertion = For_loop([Statement()]);
+export const insertion = block([
+    
+]);
+
+console.log(to_string(insertion));
