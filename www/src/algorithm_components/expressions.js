@@ -21,7 +21,7 @@ export const less_than = () => ({type: operator.less_than});
 
 export let to_string = expression.empty_mapping();
 to_string[expression.constant.id] = ({value}) => value.toString();
-to_string[expression.binary_operator.id] = ({operator, left, right}) => all_to_string(left) + all_to_string(operator) + all_to_string(right);
+to_string[expression.binary_operator.id] = ({operator, left, right}) => all_to_string(left) + operator_to_string.apply(operator) + all_to_string(right);
 
 export let operator_to_string = operator.empty_mapping();
 operator_to_string[operator.plus.id] = () => " + ";
