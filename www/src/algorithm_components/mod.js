@@ -3,6 +3,8 @@ import {variable, to_string as variable_to_string} from "./variables";
 import {expression, to_string as expression_to_string, operator, operator_to_string} from "./expressions";
 import { Enum, make_string } from "../util";
 
+export {variable_to_string};
+
 export const visualise = (component) => {
     if(component.type.parent_enum === statement) {
         return visualise_statement[component.type.id](component);

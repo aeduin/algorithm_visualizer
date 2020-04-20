@@ -1,3 +1,5 @@
+import { insertion } from "./sort";
+
 export class Enum {
     constructor(keys) {
         let next_value = 0;
@@ -10,11 +12,21 @@ export class Enum {
     }
 
     empty_mapping() {
-        let result = Array(this.size);
+        let result = new Enum_mapping(this.size);
         for(let i = 0; i < this.size; i++) {
             result[i] = null;
         }
         return result;
+    }
+}
+
+class Enum_mapping extends Array {
+    constructor(...args) {
+        super(...args);
+    }
+
+    apply(instance) {
+        return this[instance.type.id](instance);
     }
 }
 
